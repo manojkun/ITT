@@ -1,0 +1,17 @@
+body {
+background-image: url("bg.jpg");
+background-size: cover;
+background-position: center;
+color: white;
+}
+.column{
+	float: left;
+}
+
+#le {
+	margin-right: 20px;
+}
+
+h4 {
+	color: white;
+}
