@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>	Js </title>
+		<script>
+		function lo(){
+				var str = document.forms["myForm"]["latin"].value;	
+				for(var i=0;i<str.length;i++){
+					for(var j=0;j<str.length;j++){
+						for(var k=0;k<str.length;k++){
+							if(i===j || j===k || i===k){
+								continue;
+							}
+							document.getElementById("tt").innerHTML += str[i]+str[j]+str[k]+" ";
+						}
+					}
+				}
+			}
+	
+	</script>
+	</head>
+	<body>
+		<form id="myForm">
+			<input type="text" name="latin" id="latin">
+			<br/>
+			<br/>
+			<input type="button" name="submit" value="Submit" onclick="lo()">
+		</form>
+		<textarea id="tt" rows="50" cols="150"></textarea
+	</body>
+</html>

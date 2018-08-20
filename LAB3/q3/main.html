@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>	Js </title>
+		<script>
+		function lo(){
+				var str = document.forms["myForm"]["latin"].value;	
+				var area = str.slice(1,4);
+				var num = str.slice(5);
+				var nums = num.split("-");
+				var um = nums[0] + nums[1];
+				document.getElementById("tt").innerHTML = area;
+				document.getElementById("cheer").innerHTML = um;
+	}
+	</script>
+	</head>
+	<body>
+		<form id="myForm">
+			<h3>Enter telephone Number in Proper Format ex: (555)555-5555 </h3>
+			<input type="text" name="latin" id="latin">
+			<br/>
+			<br/>
+			<input type="button" name="submit" value="Submit" onclick="lo()">
+		</form>
+		<h2>Area Code:</h2>
+		<textarea id="tt" rows="1" cols="5"></textarea>
+		<h2>Number:</h2>
+		<textarea id="cheer" rows="1" cols="10"></textarea>
+	</body>
+</html>
