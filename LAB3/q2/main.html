@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>	Js </title>
+		<script>
+		function lo(){
+			var str = document.forms["myForm"]["latin"].value;
+			var res = str.split(" ");
+			//document.getElementById("tt").innerHTML += res;
+			for(var i=0;i<res.length;i++){
+				var word = res[i].toString();
+				var fletter = word.charAt(0);
+				var fin = word.slice(1) + fletter + "ay";
+				document.getElementById("tt").innerHTML += fin + " ";
+			}
+			//document.getElementById("tt").innerHTML += "lol";
+	}
+	</script>
+	</head>
+	<body>
+		<form id="myForm">
+			<h3>Enter Phrase:</h3>
+			<input type="text" name="latin" id="latin">
+			<br/>
+			<br/>
+			<input type="button" name="submit" value="Submit" onclick="lo()">
+		</form>
+		<textarea id="tt" rows="10" cols="100"></textarea>
+	</body>
+</html>
