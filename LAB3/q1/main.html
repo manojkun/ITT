@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>	Js </title>
+		<script>
+		function lo(){
+		var i=5;
+		var dir = 1;
+		function finc(){
+			if(dir===1){
+					document.getElementById("myP").style.fontSize = ++i;
+					if(i===50){
+						dir=0;
+						document.getElementById("myP").style.color = "blue";
+						document.getElementById("myP").innerHTML = "TEXT-SHRINKING";
+					}
+				}
+			else{
+					document.getElementById("myP").style.fontSize = --i;
+					if(i===5)
+					{
+						dir=1;
+						document.getElementById("myP").style.color = "red";
+						document.getElementById("myP").innerHTML = "TEXT-GROWING";
+					}
+			}
+		}
+		document.getElementById("myP").style.color = "red";
+		var inter = setInterval(finc,100);
+	}
+	</script>
+	</head>
+	<body onload="lo()">
+	<center><p id="myP">TEXT-GROWING</p></center>
+	</body>
+</html>
