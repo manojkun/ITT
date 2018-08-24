@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>	Js </title>
+		<script>
+		var i = 0;
+		function lo(){
+				for(var i=0;i<=10;i++){
+					var sq = i*i;
+					var cu = i*i*i;
+					document.getElementById("myT").innerHTML += "<tr><td>"+i+"</td><td>"+sq+"</td><td>"+cu+"</td></tr>";
+				}
+
+			}
+		</script>
+	</head>
+	<body onload="lo();">
+		<table id="myT" border="2">
+		<tr>
+			<th>Num</th>
+			<th>Square</th>
+			<th>Cube</th>
+		</tr>
+	</body>
+</html>
