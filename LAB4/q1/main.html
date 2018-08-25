@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab4 JS</title>
+	<script type="text/javascript">
+		function fibonacci(){
+			var str = prompt("Please Enter a Number","0");
+			if(str === null){
+				alert("Please Enter a value!!!");
+			}
+			else{
+				document.getElementById("myT").innerHTML = "";
+				var fib = [0,1];
+				var num = str.valueOf();
+				for(var i=2;i<num;i++){
+					fib[i] = fib[i-1] + fib[i-2];
+				}
+				for(var j=0;j<num;j++){
+					document.getElementById("myT").innerHTML += "<tr><td>"+ (j+1) +"  .</td><td>"+ fib[j] +"</td></tr>";
+				}
+			}
+		}
+		function square(){
+			var str = prompt("Please Enter a Number","0");
+			if(str === null){
+				alert("Please Enter a value!!!");
+			}
+			else{
+				document.getElementById("myT").innerHTML = "";
+				var num = str.valueOf();
+				for(var j=0;j<num;j++){
+					document.getElementById("myT").innerHTML += "<tr><td>"+ j +"  .</td><td>"+ j*j +"</td></tr>";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="fibonacci();">Fibonacci</button>
+	<button onclick="square();">Squares</button>
+<table id="myT">
+</table>
+</body>
+</html>
