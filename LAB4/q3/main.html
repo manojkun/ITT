@@ -1,0 +1,28 @@
+<html >
+<head>
+<title>Stacking</title>
+<link rel="stylesheet" type="text/css" href="">
+<style type="text/css"> 
+ .p1 { border: solid thick #C0C0C0; padding: 1in; width:180px; background-color:#0000D0; color:white; position:absolute; top:70px; left:4in; z-index:1; }
+ .p2 { border: solid thick #808000; padding: 1in; width:180px; background-color:red; color:white; position:absolute; top:105px; left:5in; z-index:2; } 
+ .p3 { border: solid thick #00ffff; padding: 1in; width:180px; background-color:green; color:white; position:absolute; top:140px; left:6in; z-index:3; } 
+ p:hover{background-color:rgb(250,200,150);font-size:25px;color:white;color:red;}
+</style>
+</head>
+<body>
+<p class="p1" id="pid1" onmouseover="move('pid1')"> This is the First Paragraph </p>
+<p class="p2" id="pid2" onmouseover="move('pid2')"> This is the Second Paragraph </p>
+<p class="p3" id="pid3" onmouseover="move('pid3')"> This is the Third Paragraph </p> 
+<script type="text/javascript">
+var pid="pid1";
+var phOld=document.getElementById(pid).style;
+		function move(Pnow) {  
+			phOld.zIndex="0"; 
+			var phNew=document.getElementById(Pnow).style; 
+			phNew.zIndex="5"; 
+			pid=document.getElementById(Pnow).id;
+			phOld=document.getElementById(pid).style; 
+}
+</script>
+</body>
+</html>

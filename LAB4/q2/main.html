@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab4 JS q2</title>
+	<script type="text/javascript">
+		function Str(){
+			var str = prompt("Please Enter a String","String");
+			if(str === null){
+				alert("Please Enter a value!!!");
+			}
+			else{
+				var vowels = ['a','e','i','o','u'];
+				for (var i = 0; i < str.length; i++) {
+					var char = str.toLowerCase().charAt(i);
+					var indx = vowels.indexOf(char);
+					if(indx != -1){
+						document.getElementById("myT").innerHTML = "Index of left most vowel is : " + i;
+							break;
+						}
+					}
+					if(indx === -1)
+						document.getElementById("myT").innerHTML = "No Vowel in string"; 
+			}
+		}
+		function Num_rev(){
+			var str = prompt("Please Enter a Number","0");
+			if(str === null){
+				alert("Please Enter a value!!!");
+			}
+			else{
+				var rev = str.split("").reverse().join("");
+				document.getElementById("myT").innerHTML = rev;
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="Str();">String</button>
+	<button onclick="Num_rev();">Number_reverse</button>
+<p id="myT">
+</p> 
+</body>
+</html>

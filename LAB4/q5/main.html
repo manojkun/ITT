@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab4 js Q5</title>
+	<script type="text/javascript">
+		var op1;
+		var op2;
+		var opr;
+		function cal(op){
+			op1=parseInt(document.getElementById('cal').value);
+			opr=op;
+			document.getElementById('cal').value="";
+		}
+		function eq(){
+			op2=parseInt(document.getElementById('cal').value);
+			var ans;
+			if(opr === '+')
+				ans = op1+op2;
+			else if (opr === '-')
+				ans = op1-op2;
+			else if (opr === '*')
+				ans = op1*op2;
+			else
+				ans = op1/op2;
+			document.getElementById('cal').value=ans;
+		}
+	</script>
+</head>
+<body>
+<h1 style="color: blue;">Javascript Calculator</h1>
+<input id="cal" type="cal" name="cal"><br><br>
+<button onclick="cal('+');">+</button>
+<button onclick="cal('-');">-</button><br>
+<button onclick="cal('*');">*</button>
+<button onclick="cal('/');">/</button>
+<br>
+<button onclick="eq();">=</button>
+</body>
+</html>
