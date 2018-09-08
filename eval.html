@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab4 JS</title>
+	<script type="text/javascript">
+		function eval(){
+			var str = prompt("Please Enter three numbers separated by spaces","0 1 2");
+			if(str === null){
+				alert("Please Enter a value!!!");
+			}
+			else{
+				var nums = str.split(" ");
+				var i=0;
+				for(i=0;i<nums.length;i++){
+					var n = parseInt(nums[i]);
+					document.getElementById("myT").innerHTML += "<tr><td>"+n+"</td><td>"+n*n+"</td></tr>";
+				}
+			}
+		}
+		var str = "Hello world";
+		var str2 = str.slice(1,4);
+		document.writeln(str2);
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		while(n<10)
+			n++;
+		document.writeln(n++);
+	</script>
+	<button onclick="eval();">Input</button>
+<table id="myT" border="2">
+</table>
+</body>
+</html>
