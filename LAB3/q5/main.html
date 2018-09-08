@@ -5,14 +5,23 @@
 		var i = 0;
 		function lo(){
 				var list = ["red","blue","green","lightblue","yellow","pink","coral"];
-				if(i===list.length){
-					i = 0;
+				for(var i=0;i<=6;i++){
+					document.getElementById(i).addEventListener('mouseover',function () {
+						document.body.style.backgroundColor = list[this.id];});
 				}
-				document.getElementById("myP").style.backgroundColor = list[i++];
 			}
 		</script>
 	</head>
 	<body>
 		<h1><p id="myP" onmouseover="lo();">Color Shifting Text</p></h1>
+		<ol>
+			<li id="0" onmouseover="lo();">Red</li>
+			<li id="1" onmouseover="lo();">Blue</li>
+			<li id="2" onmouseover="lo();">Green</li>
+			<li id="3" onmouseover="lo();">lightblue</li>
+			<li id="4" onmouseover="lo();">yellow</li>
+			<li id="5" onmouseover="lo();">Pink</li>
+			<li id="6" onmouseover="lo();">Coral</li>
+		</ol>
 	</body>
 </html>

@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>	Js </title>
+		<script>
+		var i = 0;
+		function lo(){
+				var list = ["red","blue","green","lightblue","yellow","pink","coral"];
+				if(i===list.length){
+					i = 0;
+				}
+				document.getElementById("myP").style.backgroundColor = list[i++];
+			}
+		</script>
+	</head>
+	<body>
+		<h1><p id="myP" onmouseover="lo();">Color Shifting Text</p></h1>
+	</body>
+</html>
