@@ -1,4 +1,7 @@
 #!/usr/bin/python
 str=input("Enter String: ")
 a = list(str)
-print(a == list(reversed(a)))
+if a == list(reversed(a)):
+    print("Palindrome")
+else:
+    print("not Palindrome")

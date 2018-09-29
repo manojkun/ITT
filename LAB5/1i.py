@@ -1,3 +1,6 @@
 #!/usr/bin/python
-l=input().split(' ')
-print(l==list(reversed(l)))
+l=input("Enter list elements: ").split(' ')
+if l==list(reversed(l)):
+    print("Palindrome")
+else:
+    print("Not Palindrome")
